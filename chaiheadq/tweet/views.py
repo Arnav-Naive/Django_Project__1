@@ -61,3 +61,13 @@ def register(request):
     else:
         form = UserRegistrationForm()
     return render(request, 'registration/register.html', {'form': form})
+
+# Search functionality
+def search_tweets(request):
+    query = request.GET.get('q', '')  # URL se ?q=... uthao, default empty string
+    tweets = []
+
+    if query:
+        tweets = Tweet.objects.filter(text__icontains=query).order_by('-created_at')
+
+    return render(request, 'search_results.html', {'tweets': tweets, 'query': query})
