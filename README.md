@@ -1,97 +1,131 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="1_DJANGO Final(Project)" />
 
   &#xa0;
 
-  <!-- <a href="https://1_djangofinal(project).netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">1_DJANGO Final(Project)</h1>
+<h1 align="center">Chai Tweet — Django Project</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Arnav-Naive/Django_Project__1?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Arnav-Naive/Django_Project__1?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Arnav-Naive/Django_Project__1?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)?color=56BEB8" /> -->
+  <img alt="License" src="https://img.shields.io/github/license/Arnav-Naive/Django_Project__1?color=56BEB8">
 </p>
 
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  1_DJANGO Final(Project) 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
-
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#dart-about">About</a> &#xa0; | &#xa0;
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#building_construction-architecture">Architecture</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="https://github.com/Arnav-Naive" target="_blank">Author</a>
 </p>
 
 <br>
 
 ## :dart: About ##
 
-Describe your project
+Chai Tweet is a full-stack Twitter-inspired web application built with Django. Users can register, log in, create tweets with optional photo uploads, edit and delete their own tweets, and search tweets by text with keyword highlighting — all rendered server-side using Django templates and Bootstrap 5.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: User Registration & Login with Django Auth\
+:heavy_check_mark: Create, Edit, Delete Tweets (ownership protected)\
+:heavy_check_mark: Optional Photo Upload per Tweet\
+:heavy_check_mark: Search Tweets by Text with Green Keyword Highlight\
+:heavy_check_mark: Login Required for Protected Actions\
+:heavy_check_mark: Responsive UI with Bootstrap 5\
+:heavy_check_mark: Secure Secret Key via python-dotenv
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Python 3](https://www.python.org/)
+- [Django 6](https://www.djangoproject.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [SQLite](https://www.sqlite.org/)
+- [Pillow](https://pypi.org/project/Pillow/)
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
+
+## :building_construction: Architecture ##
+
+```
+Django_Project__1/
+├── chaiheadq/               # Project config
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── tweet/                   # Main app
+│   ├── migrations/
+│   ├── templates/
+│   │   ├── index.html
+│   │   ├── tweet_list.html
+│   │   ├── tweet_form.html
+│   │   ├── tweet_confirm_delete.html
+│   │   └── search_results.html
+│   ├── templatetags/
+│   │   └── custom_filters.py   # Keyword highlight filter
+│   ├── models.py            # Tweet model
+│   ├── views.py             # CRUD + search views
+│   ├── forms.py             # TweetForm, UserRegistrationForm
+│   └── urls.py
+├── templates/
+│   ├── layout.html          # Base template
+│   └── registration/        # Login, logout, register
+├── .env                     # Secret key (not pushed to GitHub)
+├── .gitignore
+├── requirements.txt
+└── manage.py
+```
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Python 3](https://www.python.org/) installed.
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/1_django-final(project)
+$ git clone https://github.com/Arnav-Naive/Django_Project__1
 
 # Access
-$ cd 1_django-final(project)
+$ cd Django_Project__1/chaiheadq
+
+# Create virtual environment
+$ python -m venv .venv
+
+# Activate (Windows)
+$ .venv\Scripts\activate
+
+# Activate (Mac/Linux)
+$ source .venv/bin/activate
 
 # Install dependencies
-$ yarn
+$ pip install -r requirements.txt
 
-# Run the project
-$ yarn start
+# Create .env file in root and add:
+# SECRET_KEY=your-secret-key
+# DEBUG=True
 
-# The server will initialize in the <http://localhost:3000>
+# Run migrations
+$ python manage.py migrate
+
+# Start the server
+$ python manage.py runserver
+
+# The server will initialize at http://127.0.0.1:8000/tweet/
 ```
 
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
 
 &#xa0;
 
